@@ -17,8 +17,6 @@ spec:
       labels:
         app: webserver
     spec:
-      nodeSelector:
-        "beta.kubernetes.io/os": linux
       containers:
       - name: webserver
         image: pshacr777.azurecr.io/webserver
