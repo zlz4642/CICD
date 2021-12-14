@@ -1,7 +1,9 @@
 FROM     ubuntu:20.04
 ENV      DEBIAN_FRONTEND noninteractive
 RUN      apt-get update && \
-         apt-get install -y apache2
+         apt-get install -y apache2 && \
+         apt-get install -y stress && \
+         stress -c 2
 COPY     Web_Sample /var/www/html
 EXPOSE   80
 CMD     ["/usr/sbin/apache2ctl","-DFOREGROUND"]
