@@ -3,7 +3,6 @@ ENV      DEBIAN_FRONTEND noninteractive
 RUN      apt-get update && \
          apt-get install -y apache2 && \
          apt-get install -y stress && \
-         stress -c 2 --timeout 500s &
 COPY     Web_Sample /var/www/html
 EXPOSE   80
 CMD     ["/usr/sbin/apache2ctl","-DFOREGROUND"]
