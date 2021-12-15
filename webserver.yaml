@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: webserver
-        image: pshacr777.azurecr.io/webserver
+        image: ghcr.io/zlz4642/webserver:v1
         ports:
         - containerPort: 80
         resources:
