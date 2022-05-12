@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zlzcicd123 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zlzcicd123
+  template:
+    metadata:
+      labels:
+        app: zlzcicd123 
+    spec:
+      containers:
+        - name: zlzcicd123 
+          image: pshacr.azurecr.io/zlzcicd123
+          ports:
+          - containerPort: 80
